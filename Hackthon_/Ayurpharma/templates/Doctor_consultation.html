@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+
+    <head>
+        <meta charset="UTF-8">
+        <title> Contact Us </title>
+        <link rel="stylesheet" href="static/contact.css">
+        <!-- Fontawesome CDN Link -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <div id="home">
+            <a id="home-icon" href="/">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
+                    <style>
+                        svg {
+                            fill: #3e2093
+                        }
+                    </style>
+                    <path
+                        d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
+                </svg>
+            </a>
+        </div>
+        <div class="container">
+            <div class="content">
+                <div class="left-side"><b>
+
+                        <div class="address details">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="topic">Address</div>
+                            <div class="text-one">Sector 15</div>
+                            <div class="text-two">Gandhinagar</div>
+                        </div><br>
+                        <div class="phone details">
+                            <i class="fas fa-phone-alt"></i>
+                            <div class="topic">Phone</div>
+                            <div class="text-one">+91-9789864573</div>
+                            <div class="text-two">+91-9165324789</div>
+                        </div><br>
+                        <div class="email details">
+                            <i class="fas fa-envelope"></i>
+                            <div class="topic">Email</div>
+                            <div class="text-one">AyurPharma34@gmail.com</div>
+                            <div class="text-two">infoAyureda61@gmail.com</div>
+                        </div><br>
+                    </b>
+
+                </div>
+                <div class="right-side">
+                    <div class="topic-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Contact us</b> <small>for Doctor
+                            Consultation</small>
+                    </div>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Have a question or need assistance? We're here to help!
+                        
+                    </p>
+                    <form action="/contact_us" id="contactForm" method="post">
+                    {% csrf_token %}    
+                        <div class="input-box">
+                            <input for="name" type="text" placeholder="Name" name="name" id="name" required>
+                        </div>
+                        <div class="input-box">
+                            <input for="email" type="email" placeholder="E-mail" name="email" id="email" required><input type="tel"
+                                placeholder="Phone Number" pattern="\d*" id="phone" name="phone" maxlength="10"
+                                required />
+                        </div>
+                        <div class="input-box">
+                            <input type="date" name="date" placeholder="Enter date " required><textarea class="textinput"
+                                for="message" name="desc" placeholder="Your Review" id="message" required></textarea>
+                        </div>
+                        <br><br>
+                        <div class="input-box message-box">
+
+                        </div>
+                        <div class="button">
+                            <a href=""> <input type="submit" onclick="/thank_you" value="Submit"> </a>
+                            <!-- <a href="/Contact-us/result.html"> <button>Submit</button> -->
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- <script src="contact.js"></script> -->
+        <script src="statc/contact_script.js"></script>
+    </body>
+
+</html>
